@@ -277,7 +277,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "help":
             buttons = [
                 [
-                    InlineKeyboardButton('Making Video', url=f'{TUTORIAL}')
+                    InlineKeyboardButton('Making Video', url=f'{@seditionautofilterbot}')
                 ]
                 ]
             await query.message.edit(text=f"{HELP}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
@@ -285,10 +285,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "about":
             buttons = [
                 [
-                    InlineKeyboardButton('Making Video', url=f'{TUTORIAL}')
+                    InlineKeyboardButton('Making Video', url=f'{@seditionautofilterbot}')
                 ]
                 ]
-            await query.message.edit(text=f"{ABOUT}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+            await query.message.edit(text=f"{ABOUT}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=False)
 
 
         elif query.data.startswith("pr0fess0r_99"):
@@ -308,7 +308,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('🖥️ How To Own 🖥️', url=f'{TUTORIAL}')
+                        InlineKeyboardButton('🖥️ How To Own 🖥️', url=f'{@seditionautofilterbot}')
                     ]
                     ]
                 
@@ -339,10 +339,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{title}"
                 buttons = [
                     [
-                        InlineKeyboardButton('🖥️ How To Own 🖥️', url=f'{TUTORIAL}')
+                        InlineKeyboardButton('🖥️ How To Own 🖥️', url=f'{@seditionautofilterbot}')
                     ]
                     ]
-                
+               
                 await query.answer()
                 await client.send_cached_media(
                     chat_id=query.from_user.id,
